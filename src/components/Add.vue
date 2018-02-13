@@ -36,7 +36,11 @@
     },
     methods: {
       addNewAd() {
-        this.$emit('on-create', this.title, this.description);
+        if(this.title && this.description) {
+          this.$emit('on-create', this.title, this.description);
+        } else {
+          alert("Поля ввода не должны быть пустыми!!!");
+        }
       }
     }
   }
