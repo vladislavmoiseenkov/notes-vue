@@ -16,8 +16,19 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <pagination :total="total" :page-size="pageSize" :callback="pageChanged" :options="paginationOptions" nav-class="padding-10 mt-3" ul-class="bg-color-red" li-class="txt-color-blue">
-      </pagination>
+      <div class="col-lg-12">
+        <pagination 
+          v-if="total > 0"
+          
+          :total="total" 
+          :page-size="pageSize" 
+          :callback="pageChanged" 
+          :options="paginationOptions" 
+          nav-class="padding-10 mt-3" 
+          ul-class="bg-color-red" 
+          li-class="txt-color-blue">
+        </pagination>
+      </div>
     </div>
   </div>
 </template>
